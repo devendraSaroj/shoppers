@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css" >
+    <link rel="stylesheet" type="text/css" href="main-page.css">
+    <link rel="stylesheet" href="mobile-nav-bar.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="product-list.css" />
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="FlipClock-master/compiled/flipclock.css">
+    <link rel="stylesheet" href="clock.css">
+    <script src="FlipClock-master/compiled/flipclock.js"></script>
+</head>
+<body>
+    <div class="mobile-nav-bar">
+        <div class="mobile-nav-item mobile-nav-icon">
+           <a href="#"><i class="fas fa-bars"></i></a>
+        </div>
+        <div class="mobile-nav-item mobile-nav-search">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="mobile-nav-item mobile-nav-profile">
+            <a href="#"><i class="fas fa-user-alt"></i></a>
+        </div>
+        <div class="mobile-nav-item mobile-nav-cart">
+           <a href="#"><i class="fas fa-shopping-cart"></i>
+            <span class="mobile-nav-cart-count">0</span>
+            </a>
+        </div>
+    </div>
+    <div class="mobile-nav-logo text-center">
+        <div class="container">
+            <div class="logo">
+            <a href="#" title="Shoppers Logo">Shoppers</a>
+            </div>
+        </div>
+    </div>
+    <div class="pattern">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="top-bar">
+                    <ul class="menu list-unstyled">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Wish List</a></li>
+                        <li><a href="#">Shopping Cart</a></li>
+                        <li><a href="#">Check Out</a></li>
+                    </ul>
+                </div> 
+            </div> 
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4" id="header-left">
+                    <div class="logo">
+                        <a href="#" title="Shoppers Logo">Shoppers</a>
+                    </div>
+                </div>
+                <div class="col-sm-8" id="header-right">
+                    <form action="/search" method="GET" role="search" class="search-form">
+                        <div class="button-search">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <input type="search" name="q" class="input-block-level-search-query" id="search-query" placeholder="Search" autocomplete="off">
+                    </form>
+                    <a href="#" class="my-wishlist"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="my-account"><i class="fas fa-user"></i></a>
+                    <div id="cart-block" class="dropdown cart-block-click">
+                        <div class="cart-heading " data-hover="dropdown" data-toggle="dropdown">
+                            <i class="cart-count"><span class="total-count-ajax">0</span></i>
+                            <div class="cart-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <p><strong id="total-price-ajax"><span class="total-price">Rs. 0.00</span></strong></p>
+                            <div class="dropdown-menu" id="cart-content">
+                                <div class="cart-content-ajax">
+                                    <div class="empty">No Products in the cart.</div>
+                                </div>
+                                <div class="loading-overlay">
+                                    <!-- <i class="fas fa-spinner"></i> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="megamenu-wrapper">
+            <div class="container">
+                <div class="row">
+                    <ul class="fade1 list-unstyled nav-list">
+                        <li class="nav-attr-1">
+                            <p class="close-menu"></p>
+                            <p class="open-menu mobile-disabled"></p>
+                            <a href="#" ><span><strong><span>Trends</span></strong></span></a>
+                            <div class="nav2-dropdown nav-attr-1-dropdown">
+                                <div class="nav2-dropdown-ctn">
+                                    <div class="nav2-dropdown-txt">
+                                        <div class="one-tr">
+                                            <h6><a href="#" title="Trending"> Trending</a></h6>
+                                            <div class="item-txt"><a href="#">Animal Print</a></div>
+                                            <div class="item-txt"><a href="#">Neon Colors</a></div>
+                                            <div class="item-txt"><a href="#">Mixed Print</a></div>
+                                            <div class="item-txt"><a href="#">Basics Shop</a></div>
+                                            <div class="item-txt"><a href="#">Pink</a></div>
+                                            <div class="item-txt"><a href="#">Tie Neck</a></div>
+                                            <div class="item-txt"><a href="#">Contrast Mesh</a></div>
+                                            <div class="item-txt"><a href="#">Crop Tops</a></div>
+                                        </div>
+                                        <div class="one-tr">
+                                            <h6><a href="#" title="Trending">Shop by Style</a></h6>
+                                            <div class="item-txt"><a href="#">Urban Boho</a></div>
+                                            <div class="item-txt"><a href="#">Workwear</a></div>
+                                            <div class="item-txt"><a href="#">Sexy</a></div>
+                                            <div class="item-txt"><a href="#">Sports</a></div>
+                                            <div class="item-txt"><a href="#">Elegant</a></div>
+                                            <div class="item-txt"><a href="#">Party</a></div>
+                                            <div class="item-txt"><a href="#">Casual</a></div>
+                                            <div class="item-txt"><a href="#">Preppy</a></div>
+                                            <div class="item-txt"><a href="#">Rock</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="border-line"></div>
+                                    <div class="nav2-dropdown-img">
+                                        <div class="img-group-ctn">
+                                            <div class="img-ctn">
+                                                <a href="#" title="">
+                                                    <img src="img/classy.jpg" alt="image">
+                                                </a>
+                                            </div>
+                                            <p class="img-txt">Party Top Picks</p>
+                                        </div>
+                                        <div class="img-group-ctn">
+                                            <div class="img-ctn">
+                                                <a href="#" title="">
+                                                    <img src="img/night-out.webp" alt="image">
+                                                </a>
+                                            </div>
+                                            <p class="img-txt">Night-out</p>
+                                        </div>
+                                        <div class="img-group-ctn">
+                                            <div class="img-ctn">
+                                                <a href="#" title="">
+                                                    <img src="img/1.jpg" alt="image">
+                                                </a>
+                                            </div>
+                                            <p class="img-txt">floral-print</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-attr-2">
+                            <p class="close-menu"></p>
+                            <p class="open-menu mobile-disabled"></p>
+                            <a href="#" ><span><strong><span>Clothing</span></strong></span></a>
+                            <div class="nav2-dropdown nav-attr-2-dropdown">
+                                <div class="nav2-dropdown-ctn container">
+                                    <div class="nav2-dropdown-txt">
+                                        <div class="one-tr">
+                                            <h6><a href="#" title="Trending"> Tops</a></h6>
+                                            <div class="item-txt"><a href="#">T-shirts</a></div>
+                                            <div class="item-txt"><a href="#">Tank Tops</a></div>
+                                            <div class="item-txt"><a href="#">Bodysuit</a></div>
+                                        </div>
+                                        <div class="one-tr">
+                                            <h6><a href="#" title="Trending">Bottoms</a></h6>
+                                            <div class="item-txt"><a href="#">Pants</a></div>
+                                            <div class="item-txt"><a href="#">Leggings</a></div>
+                                            <div class="item-txt"><a href="#">Skirts</a></div>
+                                            <div class="item-txt"><a href="#">Shorts</a></div>
+                                        </div>
+                                        <div class="one-tr">
+                                            <h6><a href="#" title="Trending">Activewear</a></h6>
+                                            <div class="item-txt"><a href="#">Sports Tops</a></div>
+                                            <div class="item-txt"><a href="#">Sports Bottoms</a></div>
+                                            <div class="item-txt"><a href="#">Sports Sets</a></div>
+                                            <div class="item-txt"><a href="#">Sports Bras</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="border-line"></div>
+                                    <div class="nav2-dropdown-img">
+                                        <div class="img-group-ctn">
+                                            <div class="img-ctn">
+                                                <a href="#" title="">
+                                                    <img src="img/tops.jpg" alt="image">
+                                                </a>
+                                            </div>
+                                            <p class="img-txt">New in Tops</p>
+                                        </div>
+                                        <div class="img-group-ctn">
+                                            <div class="img-ctn">
+                                                <a href="#" title="">
+                                                    <img src="img/bottoms.jpg" alt="image">
+                                                </a>
+                                            </div>
+                                            <p class="img-txt">New in Bottoms</p>
+                                        </div>
+                                        <div class="img-group-ctn">
+                                            <div class="img-ctn">
+                                                <a href="#" title="">
+                                                    <img src="img/sports-wear.jpg" alt="image">
+                                                </a>
+                                            </div>
+                                            <p class="img-txt">Sportswear</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-attr-3">
+                            <p class="close-menu"></p>
+                            <p class="open-menu mobile-disabled"></p>
+                            <a href="#" ><span><strong><span>Dresses</span></strong></span></a>
+                            <div class="nav2-dropdown nav-attr-3-dropdown">
+                                <div class="nav2-dropdown-ctn container">
+                                    <div class="nav2-dropdown-txt">
+                                        <div class="one-tr">
+                                            <h6><a href="#" title="Trending">Shop by Style</a></h6>
+                                            <div class="item-txt"><a href="#"> Maxi Dresses</a></div>
+                                            <div class="item-txt"><a href="#">Casual Dresses</a></div>
+                                            <div class="item-txt"><a href="#">Bodycon Dresses</a></div>
+                                            <div class="item-txt"><a href="#">Short Dresses</a></div>
+                                            <div class="item-txt"><a href="#">Elegant Dresses</a></div>
+                                            <div class="item-txt"><a href="#">Sweater Dresses</a></div>
+                                        </div>
+                                        <div class="one-tr">
+                                            <h6><a href="#" title="Trending">Shop by Occasion</a></h6>
+                                            <div class="item-txt"><a href="#">Party Dresses</a></div>
+                                            <div class="item-txt"><a href="#">Dress for Vacation</a></div>
+                                            <div class="item-txt"><a href="#">Going Out Dresses</a></div>
+                                            <div class="item-txt"><a href="#">Night out Dresses</a></div>
+                                            <div class="item-txt"><a href="#">Workwear Dresses</a></div>
+                                            <div class="item-txt"><a href="#">Cocktail Dresses</a></div>
+                                        </div>
+                                        <div class="one-tr">
+                                            <h6><a href="#" title="Trending">Shop by Trends</a></h6>
+                                            <div class="item-txt"><a href="#">Fall & Winter Dresses</a></div>
+                                            <div class="item-txt"><a href="#">Boho Dresses</a></div>
+                                            <div class="item-txt"><a href="#">Floral Dresses</a></div>                                            
+                                            <div class="item-txt"><a href="#">Off the Shoulder Dresses</a></div>
+                                            <div class="item-txt"><a href="#">Vintage Dresses</a></div>
+                                            <div class="item-txt"><a href="#">Tunic Dresses</a></div>
+                                            <div class="item-txt"><a href="#">Casual</a></div>
+                                            <div class="item-txt"><a href="#">Preppy</a></div>
+                                            <div class="item-txt"><a href="#">Rock</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="border-line"></div>
+                                    <div class="nav2-dropdown-img">
+                                        <div class="img-group-ctn">
+                                            <div class="img-ctn">
+                                                <a href="#" title="">
+                                                    <img src="img/dresses.jpg" alt="image">
+                                                </a>
+                                            </div>
+                                            <p class="img-txt">New in Dresses</p>
+                                        </div>
+                                        <div class="img-group-ctn">
+                                            <div class="img-ctn">
+                                                <a href="#" title="">
+                                                    <img src="img/maxie.jpg" alt="image">
+                                                </a>
+                                            </div>
+                                            <p class="img-txt">New in Maxi</p>
+                                        </div>
+                                        <div class="img-group-ctn">
+                                            <div class="img-ctn">
+                                                <a href="#" title="">
+                                                    <img src="img/floral.jpg" alt="image">
+                                                </a>
+                                            </div>
+                                            <p class="img-txt">floral-print</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-attr-4">
+                            <p class="close-menu"></p>
+                            <p class="open-menu mobile-disabled"></p>
+                            <a href="#" ><span><strong><span>Western</span></strong></span></a>
+                            <div class="nav2-dropdown nav-attr-2-dropdown">
+                                <div class="nav2-dropdown-ctn container">
+                                    <div class="nav2-dropdown-txt">
+                                        <div class="one-tr">
+                                            <h6><a href="#" title="Trending"> Tops</a></h6>
+                                            <div class="item-txt"><a href="#">T-shirts</a></div>
+                                            <div class="item-txt"><a href="#">Tank Tops</a></div>
+                                            <div class="item-txt"><a href="#">Bodysuit</a></div>
+                                        </div>
+                                        <div class="one-tr">
+                                            <h6><a href="#" title="Trending">Bottoms</a></h6>
+                                            <div class="item-txt"><a href="#">Pants</a></div>
+                                            <div class="item-txt"><a href="#">Leggings</a></div>
+                                            <div class="item-txt"><a href="#">Skirts</a></div>
+                                            <div class="item-txt"><a href="#">Shorts</a></div>
+                                        </div>
+                                        <div class="one-tr">
+                                            <h6><a href="#" title="Trending">Activewear</a></h6>
+                                            <div class="item-txt"><a href="#">Sports Tops</a></div>
+                                            <div class="item-txt"><a href="#">Sports Bottoms</a></div>
+                                            <div class="item-txt"><a href="#">Sports Sets</a></div>
+                                            <div class="item-txt"><a href="#">Sports Bras</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="border-line"></div>
+                                    <div class="nav2-dropdown-img">
+                                        <div class="img-group-ctn">
+                                            <div class="img-ctn">
+                                                <a href="#" title="">
+                                                    <img src="img/tops.jpg" alt="image">
+                                                </a>
+                                            </div>
+                                            <p class="img-txt">New in Tops</p>
+                                        </div>
+                                        <div class="img-group-ctn">
+                                            <div class="img-ctn">
+                                                <a href="#" title="">
+                                                    <img src="img/bottoms.jpg" alt="image">
+                                                </a>
+                                            </div>
+                                            <p class="img-txt">New in Bottoms</p>
+                                        </div>
+                                        <div class="img-group-ctn">
+                                            <div class="img-ctn">
+                                                <a href="#" title="">
+                                                    <img src="img/sports-wear.jpg" alt="image">
+                                                </a>
+                                            </div>
+                                            <p class="img-txt">Sportswear</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="close-menu"></p>
+                            <p class="open-menu mobile-disabled"></p>
+                            <a href="#"><span><strong><span>Plus Size</span></strong></span></a>
+                        </li>
+                        <li>
+                            <p class="close-menu"></p>
+                            <p class="open-menu mobile-disabled"></p>
+                            <a href="#"><span><strong><span>Shoes & Accessories</span></strong></span></a>
+                        </li>
+                        <li>
+                            <p class="close-menu"></p>
+                            <p class="open-menu mobile-disabled"></p>
+                            <a href="#"><span><strong><span>Sale</span></strong></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="container-fluid">
+            <div class="row">
+               <div class="left-banner-ctn col-9">
+                    <a href="#"><div class="left-banner">
+                        <div class="left-banner-text-wrapper">
+                            <div class="b-heading ">
+                                improve<br>your<br>categories
+                            </div>
+                            <div class="b-caption ">
+                                super store...super easy
+                            </div>
+                            <a href="#" class="btn">
+                                read more
+                            </a>
+                        </div>
+                    </div></a>
+                </div>
+                <div class="right-banner-ctn col-3"> 
+                    <a href="#"><div class="right-banner">
+                        <div class="right-banner-text-wrapper">
+                            <div class="right-heading">
+                                Simply <br> Classy
+                            </div>
+                        </div>
+                    </div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="caption-top text-center">flash sale
+    <div class="clock-ctn">
+        <div class="caption-left">end in</div>
+        <div class="clock mar-left"></div>
+    </div>
+</div> 
+
+
+    <!--------------------------------PRODUCT LIST CODE START  ------------------------------>
+
+    <div class="wrapper">
+        <div class="shadow-line">
+
+        </div>
+        <div id="filter" class="filter-wrapper container-fluid">
+            <div class="row">
+                <div class="title-container">
+                    <h1 class="title">men tshirts</h1>
+                    <span class="title-count"> - 58364 items</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="left-container col-5 col-sm-5 col-md-4 col-lg-3 col-xl-3 no-left-padding no-right-padding">
+                    <div class="filter-title-container">
+                        <h1 class="filter-title">filters</h1>
+                        <span class="clear-all-btn" onclick="uncheck_all()">clear all</span>
+                    </div>
+                    <!----------------------------------------------------
+                                         BRAND FILTER
+                    ----------------------------------------------------->
+                        <div class="vertical-filter brand-container border-top">
+                            <span class="vertical-filter-header">brand</span>
+                            <ul class="list-unstyled brand-list">
+                                <li>
+                                    <label class="custom-checkbox-container">Roadster
+                                        <span class="brand-num">(2709)</span>
+                                        <input type="checkbox" name="check">
+                                        <div class="checkbox-indicator"></div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="custom-checkbox-container">United Colors of Benetton
+                                            <span class="brand-num">(2709)</span>
+                                            <input type="checkbox" name="check">
+                                            <div class="checkbox-indicator"></div>
+                                    </label>
+                                 </li>
+                                 <li>
+                                     <label class="custom-checkbox-container">ONLY
+                                                <span class="brand-num">(2709)</span>
+                                                <input type="checkbox" name="check">
+                                                <div class="checkbox-indicator"></div>
+                                     </label>
+                                 </li>
+                                 <li>
+                                     <label class="custom-checkbox-container">FOREVER 21
+                                                   <span class="brand-num">(2709)</span>
+                                                   <input type="checkbox" name="check">
+                                                   <div class="checkbox-indicator"></div>
+                                        </label>
+                                </li>
+                            </ul>
+                            <div class="brand-more">
+                                + 462 more
+                            </div>
+                        </div>
+                        <!----------------------------------------------------
+                                         PRICE FILTER
+                        ----------------------------------------------------->
+                        <div class="vertical-filter brand-container sticky">
+                                <span class="vertical-filter-header">price</span>
+                                <ul class="list-unstyled brand-list">
+                                    <li>
+                                        <label class="custom-checkbox-container">Rs. 179 to Rs. 484 
+                                            <span class="brand-num">(2709)</span>
+                                            <input type="checkbox" name="check">
+                                            <div class="checkbox-indicator"></div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-checkbox-container">Rs. 484 to Rs. 789
+                                                <span class="brand-num">(2709)</span>
+                                                <input type="checkbox" name="check">
+                                                <div class="checkbox-indicator"></div>
+                                        </label>
+                                     </li>
+                                     <li>
+                                         <label class="custom-checkbox-container">Rs. 789 to Rs. 1094 
+                                                    <span class="brand-num">(2709)</span>
+                                                    <input type="checkbox" name="check">
+                                                    <div class="checkbox-indicator"></div>
+                                         </label>
+                                     </li>
+                                     <li>
+                                         <label class="custom-checkbox-container">Rs. 1094 to Rs. 1399 
+                                                       <span class="brand-num">(2709)</span>
+                                                       <input type="checkbox" name="check">
+                                                       <div class="checkbox-indicator"></div>
+                                            </label>
+                                    </li>
+                                </ul>
+                                <div class="brand-more">
+                                    + 462 more
+                                </div>
+                            </div>
+                            <!----------------------------------------------------
+                                         COLOUR FILTER
+                            ----------------------------------------------------->
+                            <div class="vertical-filter brand-container sticky-132">
+                                    <span class="vertical-filter-header">color</span>
+                                    <ul class="list-unstyled brand-list">
+                                        <li>
+                                            <label class="custom-checkbox-container">Grey
+                                                <span class="brand-num">(2709)</span>
+                                                <input type="checkbox" name="check">
+                                                <div class="checkbox-indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="custom-checkbox-container">Blue
+                                                    <span class="brand-num">(2709)</span>
+                                                    <input type="checkbox" name="check">
+                                                    <div class="checkbox-indicator"></div>
+                                            </label>
+                                         </li>
+                                         <li>
+                                             <label class="custom-checkbox-container">Maroon 
+                                                        <span class="brand-num">(2709)</span>
+                                                        <input type="checkbox" name="check">
+                                                        <div class="checkbox-indicator"></div>
+                                             </label>
+                                         </li>
+                                         <li>
+                                             <label class="custom-checkbox-container">Olive
+                                                           <span class="brand-num">(2709)</span>
+                                                           <input type="checkbox" name="check">
+                                                           <div class="checkbox-indicator"></div>
+                                                </label>
+                                        </li>
+                                    </ul>
+                                    <div class="brand-more">
+                                        + 462 more
+                                    </div>
+                                </div>
+                                <!----------------------------------------------------
+                                         DISCOUNT FILTER
+                                ----------------------------------------------------->
+                                <div class="vertical-filter brand-container sticky-355">
+                                        <span class="vertical-filter-header">discount range</span>
+                                        <ul class="list-unstyled brand-list">
+                                            <li>
+                                                <label class="custom-checkbox-container">20% and above 
+                                                    <span class="brand-num">(2709)</span>
+                                                    <input type="checkbox" name="check">
+                                                    <div class="checkbox-indicator"></div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox-container">30% and above
+                                                        <span class="brand-num">(2709)</span>
+                                                        <input type="checkbox" name="check">
+                                                        <div class="checkbox-indicator"></div>
+                                                </label>
+                                             </li>
+                                             <li>
+                                                 <label class="custom-checkbox-container">40% and above
+                                                            <span class="brand-num">(2709)</span>
+                                                            <input type="checkbox" name="check">
+                                                            <div class="checkbox-indicator"></div>
+                                                 </label>
+                                             </li>
+                                             <li>
+                                                 <label class="custom-checkbox-container">50% and above 
+                                                               <span class="brand-num">(2709)</span>
+                                                               <input type="checkbox" name="check">
+                                                               <div class="checkbox-indicator"></div>
+                                                    </label>
+                                            </li>
+                                        </ul>
+                                        <div class="brand-more">
+                                            + 462 more
+                                        </div>
+                                    </div>
+                </div>
+                <div class="right-container col-7 col-sm-7 col-md-8 col-lg-9 col-xl-9 no-left-padding no-right-padding">
+                    <div class="blank-gap">
+
+                    </div>
+                        <div class="item-container">
+                                <ul class="container-fluid card-container list-unstyled">
+                                    <li class="card product">
+                                        <div class="img-box">
+                                            <a href="#"><img src="img/tshirt.jpg" title="Ruched Form Fitting Solid Tee" alt=""></a>
+                                        </div>
+                                        <div class="details">
+                                            <div class="action-button">
+                                                <span class="add-to-bag product-action-button">add to bag</span>
+                                                <span class="wishlist product-action-button">wishlist</span>
+                                            </div>
+                                            <a href="#"><div><span class="product-brand">ONLY</span><span class="product-specification">Ruched Form Fitting Solid Tee</span></div>
+                                            <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                            <div class="price">Rs. 419<span class="price-strike">Rs. 699</span><span class="discount-price">(40% OFF)</span></div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="card product">
+                                            <div class="img-box">
+                                                <a href="#"><img src="img/tshirt3.jpg" title="Scallop Edge Solid Trapeze Dress" alt=""></a>
+                                            </div>
+                                            <div class="details">
+                                                <div class="action-button">
+                                                    <span class="add-to-bag product-action-button">add to bag</span>
+                                                    <span class="wishlist product-action-button">wishlist</span>
+                                                </div>
+                                                <a href="#"><div><span class="product-brand">Roadster</span><span class="product-specification">Scallop Edge Solid Trapeze Dress</span></div>
+                                                <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                                <div class="price">Rs. 578<span class="price-strike">Rs. 799</span><span class="discount-price">(33% OFF)</span></div>
+                                                </a>
+                                            </div>
+                                    </li>
+                                    <li class="card product">
+                                            <div class="img-box">
+                                                <a href="#"><img src="img/tshirt2.jpg" title="Cartoon & Letter Print Tee" alt=""></a>
+                                            </div>
+                                            <div class="details">
+                                                <div class="action-button">
+                                                    <span class="add-to-bag product-action-button">add to bag</span>
+                                                    <span class="wishlist product-action-button">wishlist</span>
+                                                </div>
+                                                <a href="#"><div><span class="product-brand">United Colors of Benetton</span><span class="product-specification">Cartoon & Letter Print Tee</span></div>
+                                                <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                                <div class="price">Rs. 489<span class="price-strike">Rs. 679</span><span class="discount-price">(19% OFF)</span></div>
+                                                </a>
+                                            </div>
+                                    </li>
+                                    <li class="card product">
+                                            <div class="img-box">
+                                                <a href="#"><img src="img/tshirt4.jpg" title="Floral Print Cami Sundress" alt=""></a>
+                                            </div>
+                                            <div class="details">
+                                                <div class="action-button">
+                                                    <span class="add-to-bag product-action-button">add to bag</span>
+                                                    <span class="wishlist product-action-button">wishlist</span>
+                                                </div>
+                                                <a href="#"><div><span class="product-brand">FOREVER 21</span><span class="product-specification">Floral Print Cami Sundress</span></div>
+                                                <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                                <div class="price">Rs. 577<span class="price-strike">Rs. 987</span><span class="discount-price">(37% OFF)</span></div>
+                                                </a>
+                                            </div>
+                                    </li> 
+                                    <li class="card product">
+                                        <div class="img-box">
+                                            <a href="#"><img src="img/tshirt1.jpg" title="Floral Print Cami Sundress" alt=""></a>
+                                        </div>
+                                        <div class="details">
+                                            <div class="action-button">
+                                                <span class="add-to-bag product-action-button">add to bag</span>
+                                                <span class="wishlist product-action-button">wishlist</span>
+                                            </div>
+                                            <a href="#"><div><span class="product-brand">FOREVER 21</span><span class="product-specification">Floral Print Cami Sundress</span></div>
+                                            <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                            <div class="price">Rs. 577<span class="price-strike">Rs. 987</span><span class="discount-price">(37% OFF)</span></div>
+                                            </a>
+                                        </div>
+                                    </li> 
+                                    <li class="card product">
+                                        <div class="img-box">
+                                            <a href="#"><img src="img/tshirt5.jpg" title="Chain Print Panel Self-Tie Blouse" alt=""></a>
+                                        </div>
+                                        <div class="details">
+                                            <div class="action-button">
+                                                <span class="add-to-bag product-action-button">add to bag</span>
+                                                <span class="wishlist product-action-button">wishlist</span>
+                                            </div>
+                                            <a href="#"><div><span class="product-brand">MANGO</span><span class="product-specification">Chain Print Panel Self-Tie Blouse</span></div>
+                                            <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                            <div class="price">Rs. 1078<span class="price-strike">Rs. 1230</span><span class="discount-price">(23% OFF)</span></div>
+                                            </a>
+                                        </div>
+                                    </li> 
+                                    <li class="card product">
+                                        <div class="img-box">
+                                            <a href="#"><img src="img/leggings1.jpg" title="High Rise Plaid Leggings" alt=""></a>
+                                        </div>
+                                        <div class="details">
+                                            <div class="action-button">
+                                                <span class="add-to-bag product-action-button">add to bag</span>
+                                                <span class="wishlist product-action-button">wishlist</span>
+                                            </div>
+                                            <a href="#"><div><span class="product-brand">FOREVER 21</span><span class="product-specification">High Rise Plaid Leggings</span></div>
+                                            <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                            <div class="price">Rs. 551<span class="price-strike">Rs. 600</span><span class="discount-price">(9% OFF)</span></div>
+                                            </a>
+                                        </div>
+                                    </li> 
+                                    <li class="card product">
+                                        <div class="img-box">
+                                            <a href="#"><img src="img/night-out.webp" title="Floral Print Cami Sundress" alt=""></a>
+                                        </div>
+                                        <div class="details">
+                                            <div class="action-button">
+                                                <span class="add-to-bag product-action-button">add to bag</span>
+                                                <span class="wishlist product-action-button">wishlist</span>
+                                            </div>
+                                            <a href="#"><div><span class="product-brand">FOREVER 21</span><span class="product-specification">Floral Print Cami Sundress</span></div>
+                                            <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                            <div class="price">Rs. 577<span class="price-strike">Rs. 987</span><span class="discount-price">(37% OFF)</span></div>
+                                            </a>
+                                        </div>
+                                    </li> 
+                                    <li class="card product">
+                                        <div class="img-box">
+                                            <a href="#"><img src="img/skirt1.jpg" title="70s Ruffle Trim Asymmetrical Hem Polka Dot Skirt" alt=""></a>
+                                        </div>
+                                        <div class="details">
+                                            <div class="action-button">
+                                                <span class="add-to-bag product-action-button">add to bag</span>
+                                                <span class="wishlist product-action-button">wishlist</span>
+                                            </div>
+                                            <a href="#"><div><span class="product-brand">ether</span><span class="product-specification">70s Ruffle Trim Asymmetrical Hem Polka Dot Skirt</span></div>
+                                            <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                            <div class="price">Rs. 1052<span class="price-strike">Rs. 1167</span><span class="discount-price">(6% OFF)</span></div>
+                                            </a>
+                                        </div>
+                                    </li> 
+                                    <li class="card product">
+                                        <div class="img-box">
+                                            <a href="#"><img src="img/tops.jpg" title="Floral Print Cami Sundress" alt=""></a>
+                                        </div>
+                                        <div class="details">
+                                            <div class="action-button">
+                                                <span class="add-to-bag product-action-button">add to bag</span>
+                                                <span class="wishlist product-action-button">wishlist</span>
+                                            </div>
+                                            <a href="#"><div><span class="product-brand">FOREVER 21</span><span class="product-specification">Floral Print Cami Sundress</span></div>
+                                            <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                            <div class="price">Rs. 577<span class="price-strike">Rs. 987</span><span class="discount-price">(37% OFF)</span></div>
+                                            </a>
+                                        </div>
+                                    </li> 
+                                    <li class="card product">
+                                        <div class="img-box">
+                                            <a href="#"><img src="img/leggings2.jpg" title="Snake Pattern Leggings" alt=""></a>
+                                        </div>
+                                        <div class="details">
+                                            <div class="action-button">
+                                                <span class="add-to-bag product-action-button">add to bag</span>
+                                                <span class="wishlist product-action-button">wishlist</span>
+                                            </div>
+                                            <a href="#"><div><span class="product-brand">ether</span><span class="product-specification">Snake Pattern Leggings</span></div>
+                                            <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                            <div class="price">Rs. 938<span class="price-strike">Rs. 987</span><span class="discount-price">(3% OFF)</span></div>
+                                            </a>
+                                        </div>
+                                    </li> 
+                                    <li class="card product">
+                                        <div class="img-box">
+                                            <a href="#"><img src="img/tshirt4.jpg" title="Floral Print Cami Sundress" alt=""></a>
+                                        </div>
+                                        <div class="details">
+                                            <div class="action-button">
+                                                <span class="add-to-bag product-action-button">add to bag</span>
+                                                <span class="wishlist product-action-button">wishlist</span>
+                                            </div>
+                                            <a href="#"><div><span class="product-brand">FOREVER 21</span><span class="product-specification">Floral Print Cami Sundress</span></div>
+                                            <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                            <div class="price">Rs. 577<span class="price-strike">Rs. 987</span><span class="discount-price">(37% OFF)</span></div>
+                                            </a>
+                                        </div>
+                                    </li> 
+                                    <li class="card product">
+                                        <div class="img-box">
+                                            <a href="#"><img src="img/tshirt.jpg" title="Ruched Form Fitting Solid Tee" alt=""></a>
+                                        </div>
+                                        <div class="details">
+                                            <div class="action-button">
+                                                <span class="add-to-bag product-action-button">add to bag</span>
+                                                <span class="wishlist product-action-button">wishlist</span>
+                                            </div>
+                                            <a href="#"><div><span class="product-brand">ONLY</span><span class="product-specification">Ruched Form Fitting Solid Tee</span></div>
+                                            <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                            <div class="price">Rs. 419<span class="price-strike">Rs. 699</span><span class="discount-price">(40% OFF)</span></div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="card product">
+                                            <div class="img-box">
+                                                <a href="#"><img src="img/tshirt3.jpg" title="Scallop Edge Solid Trapeze Dress" alt=""></a>
+                                            </div>
+                                            <div class="details">
+                                                <div class="action-button">
+                                                    <span class="add-to-bag product-action-button">add to bag</span>
+                                                    <span class="wishlist product-action-button">wishlist</span>
+                                                </div>
+                                                <a href="#"><div><span class="product-brand">Roadster</span><span class="product-specification">Scallop Edge Solid Trapeze Dress</span></div>
+                                                <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                                <div class="price">Rs. 578<span class="price-strike">Rs. 799</span><span class="discount-price">(33% OFF)</span></div>
+                                                </a>
+                                            </div>
+                                    </li>
+                                    <li class="card product">
+                                            <div class="img-box">
+                                                <a href="#"><img src="img/tshirt2.jpg" title="Cartoon & Letter Print Tee" alt=""></a>
+                                            </div>
+                                            <div class="details">
+                                                <div class="action-button">
+                                                    <span class="add-to-bag product-action-button">add to bag</span>
+                                                    <span class="wishlist product-action-button">wishlist</span>
+                                                </div>
+                                                <a href="#"><div><span class="product-brand">United Colors of Benetton</span><span class="product-specification">Cartoon & Letter Print Tee</span></div>
+                                                <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                                <div class="price">Rs. 489<span class="price-strike">Rs. 679</span><span class="discount-price">(19% OFF)</span></div>
+                                                </a>
+                                            </div>
+                                    </li>
+                                    <li class="card product">
+                                            <div class="img-box">
+                                                <a href="#"><img src="img/tshirt4.jpg" title="Floral Print Cami Sundress" alt=""></a>
+                                            </div>
+                                            <div class="details">
+                                                <div class="action-button">
+                                                    <span class="add-to-bag product-action-button">add to bag</span>
+                                                    <span class="wishlist product-action-button">wishlist</span>
+                                                </div>
+                                                <a href="#"><div><span class="product-brand">FOREVER 21</span><span class="product-specification">Floral Print Cami Sundress</span></div>
+                                                <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                                <div class="price">Rs. 577<span class="price-strike">Rs. 987</span><span class="discount-price">(37% OFF)</span></div>
+                                                </a>
+                                            </div>
+                                    </li> 
+                                    <li class="card product">
+                                        <div class="img-box">
+                                            <a href="#"><img src="img/tshirt1.jpg" title="Floral Print Cami Sundress" alt=""></a>
+                                        </div>
+                                        <div class="details">
+                                            <div class="action-button">
+                                                <span class="add-to-bag product-action-button">add to bag</span>
+                                                <span class="wishlist product-action-button">wishlist</span>
+                                            </div>
+                                            <a href="#"><div><span class="product-brand">FOREVER 21</span><span class="product-specification">Floral Print Cami Sundress</span></div>
+                                            <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                            <div class="price">Rs. 577<span class="price-strike">Rs. 987</span><span class="discount-price">(37% OFF)</span></div>
+                                            </a>
+                                        </div>
+                                    </li> 
+                                    <li class="card product">
+                                        <div class="img-box">
+                                            <a href="#"><img src="img/tshirt5.jpg" title="Chain Print Panel Self-Tie Blouse" alt=""></a>
+                                        </div>
+                                        <div class="details">
+                                            <div class="action-button">
+                                                <span class="add-to-bag product-action-button">add to bag</span>
+                                                <span class="wishlist product-action-button">wishlist</span>
+                                            </div>
+                                            <a href="#"><div><span class="product-brand">MANGO</span><span class="product-specification">Chain Print Panel Self-Tie Blouse</span></div>
+                                            <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                            <div class="price">Rs. 1078<span class="price-strike">Rs. 1230</span><span class="discount-price">(23% OFF)</span></div>
+                                            </a>
+                                        </div>
+                                    </li> 
+                                    <li class="card product">
+                                        <div class="img-box">
+                                            <a href="#"><img src="img/leggings1.jpg" title="High Rise Plaid Leggings" alt=""></a>
+                                        </div>
+                                        <div class="details">
+                                            <div class="action-button">
+                                                <span class="add-to-bag product-action-button">add to bag</span>
+                                                <span class="wishlist product-action-button">wishlist</span>
+                                            </div>
+                                            <a href="#"><div><span class="product-brand">FOREVER 21</span><span class="product-specification">High Rise Plaid Leggings</span></div>
+                                            <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                            <div class="price">Rs. 551<span class="price-strike">Rs. 600</span><span class="discount-price">(9% OFF)</span></div>
+                                            </a>
+                                        </div>
+                                    </li> 
+                                    <li class="card product">
+                                        <div class="img-box">
+                                            <a href="#"><img src="img/night-out.webp" title="Floral Print Cami Sundress" alt=""></a>
+                                        </div>
+                                        <div class="details">
+                                            <div class="action-button">
+                                                <span class="add-to-bag product-action-button">add to bag</span>
+                                                <span class="wishlist product-action-button">wishlist</span>
+                                            </div>
+                                            <a href="#"><div><span class="product-brand">FOREVER 21</span><span class="product-specification">Floral Print Cami Sundress</span></div>
+                                            <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                            <div class="price">Rs. 577<span class="price-strike">Rs. 987</span><span class="discount-price">(37% OFF)</span></div>
+                                            </a>
+                                        </div>
+                                    </li> 
+                                    <li class="card product">
+                                        <div class="img-box">
+                                            <a href="#"><img src="img/skirt1.jpg" title="70s Ruffle Trim Asymmetrical Hem Polka Dot Skirt" alt=""></a>
+                                        </div>
+                                        <div class="details">
+                                            <div class="action-button">
+                                                <span class="add-to-bag product-action-button">add to bag</span>
+                                                <span class="wishlist product-action-button">wishlist</span>
+                                            </div>
+                                            <a href="#"><div><span class="product-brand">ether</span><span class="product-specification">70s Ruffle Trim Asymmetrical Hem Polka Dot Skirt</span></div>
+                                            <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                            <div class="price">Rs. 1052<span class="price-strike">Rs. 1167</span><span class="discount-price">(6% OFF)</span></div>
+                                            </a>
+                                        </div>
+                                    </li> 
+                                    <li class="card product">
+                                        <div class="img-box">
+                                            <a href="#"><img src="img/tops.jpg" title="Floral Print Cami Sundress" alt=""></a>
+                                        </div>
+                                        <div class="details">
+                                            <div class="action-button">
+                                                <span class="add-to-bag product-action-button">add to bag</span>
+                                                <span class="wishlist product-action-button">wishlist</span>
+                                            </div>
+                                            <a href="#"><div><span class="product-brand">FOREVER 21</span><span class="product-specification">Floral Print Cami Sundress</span></div>
+                                            <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                            <div class="price">Rs. 577<span class="price-strike">Rs. 987</span><span class="discount-price">(37% OFF)</span></div>
+                                            </a>
+                                        </div>
+                                    </li> 
+                                    <li class="card product">
+                                        <div class="img-box">
+                                            <a href="#"><img src="img/leggings2.jpg" title="Snake Pattern Leggings" alt=""></a>
+                                        </div>
+                                        <div class="details">
+                                            <div class="action-button">
+                                                <span class="add-to-bag product-action-button">add to bag</span>
+                                                <span class="wishlist product-action-button">wishlist</span>
+                                            </div>
+                                            <a href="#"><div><span class="product-brand">ether</span><span class="product-specification">Snake Pattern Leggings</span></div>
+                                            <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                            <div class="price">Rs. 938<span class="price-strike">Rs. 987</span><span class="discount-price">(3% OFF)</span></div>
+                                            </a>
+                                        </div>
+                                    </li> 
+                                    <li class="card product">
+                                        <div class="img-box">
+                                            <a href="#"><img src="img/tshirt4.jpg" title="Floral Print Cami Sundress" alt=""></a>
+                                        </div>
+                                        <div class="details">
+                                            <div class="action-button">
+                                                <span class="add-to-bag product-action-button">add to bag</span>
+                                                <span class="wishlist product-action-button">wishlist</span>
+                                            </div>
+                                            <a href="#"><div><span class="product-brand">FOREVER 21</span><span class="product-specification">Floral Print Cami Sundress</span></div>
+                                            <h4 class="product-sizes">Sizes: <span>S,M,L,XL,XXL</span></h4>
+                                            <div class="price">Rs. 577<span class="price-strike">Rs. 987</span><span class="discount-price">(37% OFF)</span></div>
+                                            </a>
+                                        </div>
+                                    </li> 
+                                </ul>  
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function appear_clear_btn(){
+            var x=document.getElementsByClassName("clear-all-btn");
+            document.getElementsByName("check").on('click',function(){
+                if(x.style.display==="none"){
+                    x.style.display="block";
+                }
+                else{
+                    x.style.display="none";
+                }
+            });
+        }
+        function uncheck_all(){
+            var ele=document.getElementsByName("check");
+            for(var i=0;i<ele.length;i++)
+            ele[i].checked=false;
+        }
+    </script>
+</body>
+</html>
+
+    <script type="text/javascript">
+        var clock;
+        
+        $(document).ready(function() {
+            clock = $('.clock').FlipClock({
+                clockFace: 'TwentyFourHourClock'
+            });
+        });
+    </script>
+</body>
+</html>

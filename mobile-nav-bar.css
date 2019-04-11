@@ -1,0 +1,46 @@
+.mobile-nav-bar a{
+    color: #222 !important;
+}
+.mobile-nav-bar {
+    display: flex;
+    height: 50px;
+    font-size: 13px;
+    /* background: #fff; */
+    border-bottom: 1px solid rgb(228, 227, 227);
+    padding: 0 20px 0 20px;
+}
+.mobile-nav-item {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 10px;
+    margin-left: 20px;
+    position: relative;
+}
+.mobile-nav-icon {
+    margin: 0 auto 0 0;
+}
+.mobile-nav-cart-count {
+   position: absolute;
+   top: 12px;
+   right: -3px;
+   height: 16px;
+   width: 16px;
+   background: #ff5370;
+   color: #fff;
+   font-style: normal;
+   border-radius: 50%;
+   font-size: 8px;
+   text-align: center;
+   line-height: 16px;
+}
+.mobile-nav-logo {
+
+}
+
+/***********************MEDIA QUERY********************/
+
+@media only screen and (min-width:490px) {
+    .mobile-nav-bar {
+        padding: 0 40px 0 20px;
+    }
+}

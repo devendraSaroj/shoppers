@@ -1,0 +1,331 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    background: #fff;
+    margin-top: 30px;
+}
+/* .shadow-line{
+    box-shadow:0px 2px 11px rgba(0,0,0,0.13);;
+    height: 10px;
+} */
+.title-container{
+    margin: 10px 0 5px 25px;
+}
+.title{
+    font-weight: 500;
+    display: inline;
+    font-size: 16px;
+    color: #282c3f;
+    text-transform: capitalize;
+    margin: 0;
+}
+.title-count{
+    font-size: 16px;
+    color: #878b94;
+}
+
+.col-md-3{
+    width: 40% !important;
+}
+.col-md-9{
+    width: 60% !important;
+}
+.no-left-padding{
+    padding-left: 0 !important;
+}
+.no-right-padding{
+    padding-right: 0 !important;
+}
+.bottom-fixed{
+    position: fixed;
+    bottom: 0;
+}
+.filter-title-container{
+    margin: 10px 0 5px 25px;
+    padding-bottom: 10px;
+}
+.filter-title{
+    font-weight: 500;
+    display: inline;
+    font-size: 16px;
+    color: #282c3f;
+    text-transform: uppercase;
+    margin: 0;
+}
+.clear-all-btn{
+    box-sizing: border-box;
+    position: absolute;
+    right: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 4px;
+    color: #ff0152;
+}
+.vertical-filter{
+    padding: 15px 0 15px 25px;
+    border-bottom: solid 1px #e9e9ed;
+    border-right: solid 1px #EDEBEF;
+}
+.brand-container{
+    position: relative;
+}
+.sticky-355{
+    position: sticky;
+    top:355px;
+}
+.sticky-132{
+    position: sticky;
+    top: 132px;
+}
+.sticky{
+    position: sticky;
+    top: -90px;
+}
+.brand-top{
+    border-top: solid 1px #e9e9ed;
+}
+.vertical-filter-header{
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    clear: both;
+    color: #282c3f;
+    display: block;
+}
+.brand-list{
+    margin-bottom: 0;
+}
+.custom-checkbox-container{
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.brand-num{
+    font-size: 11px;
+    color: #878b94;
+}
+.custom-checkbox-container input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkbox-indicator{
+    position: absolute;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    border: 1px solid #c3c2c9;
+    border-radius: 2px;
+    top:0;
+    left: 0;
+    background-color: #fff;
+}
+.custom-checkbox-container input:checked ~ .checkbox-indicator{
+    background-color: #ff0152;
+    border: none;
+}
+.checkbox-indicator::after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+.custom-checkbox-container input:checked ~ .checkbox-indicator::after{
+    display: block;
+}
+.custom-checkbox-container .checkbox-indicator::after{
+    left: 6px;
+    top: 4px;
+    width: 4px;
+    height: 7px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.brand-more{
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #ff0152;
+    margin-left: 27px;
+}
+/**************************************
+           PRODUCT CARD
+**************************************/
+.container-fluid{
+   
+}
+
+.blank-gap{
+    height: 49px;
+}
+.item-container{
+    border-top: solid 1px #e9e9ed;
+    margin-right: 15px;
+
+}
+li.product{
+    display: inline-block;
+}
+.card-container{
+    padding-top:24px; 
+    margin-right: 15px !important;
+    justify-content: space-between;
+}
+.card{
+    border: none !important;
+}
+.product{
+    position: absolute;
+    width: 200px;
+    height: 340px;
+    margin: 0 10px 30px 10px;
+    display: inline-block;
+}
+.product a{
+    text-decoration: none;
+}
+.product .img-box{
+    height: 100%;
+    box-sizing: border-box;
+}
+.product .img-box img{
+    width: 100%;
+    height: 290px;
+    display: block;
+    margin-bottom: 20px;  
+}
+.details{
+    position: absolute;
+    background: #fff;
+    bottom: 0;
+    width:100%;
+    padding: 10px;   
+    box-sizing: border-box; 
+    overflow: hidden !important;
+}
+.details a{
+    text-decoration: none !important;
+}
+.action-button{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    background: #fff;
+    padding: 16px 9px;
+    width: 100%;
+}
+.product-action-button{
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+}
+.add-to-bag{
+    border-radius: 2px;
+    background-color: #ff0152;
+    color: #fff;
+    letter-spacing: 0.3px;
+    padding: 8px 12px;
+}
+.add-to-bag:hover{
+    background-color: #ff266b;
+}
+.wishlist{
+    border-radius: 2px;
+    border: 1px solid #d4d5d9;
+    color: #282c3f;
+    letter-spacing: 0.3px;
+    padding: 7px 11px;
+}
+.wishlist:hover{
+    border: 1px solid #282c3f;
+}
+.product-brand{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    color: #282c3f;
+    text-transform: capitalize;
+    margin-bottom: 6px;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+}
+.product-specification{
+    font-size: 10px;
+    color: #535766;
+    line-height: 1;
+    font-weight: 400;
+    display: block;
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+.price
+{
+    font-size: 14px;
+    color: #282c3f;
+    font-weight: 500;
+    white-space: nowrap;
+    margin: 10px 0 16px;
+}
+.price-strike{
+    font-size: 12px;
+    font-weight: 400;
+    color: #7e818c;
+    margin-left: 5px;
+    text-decoration: line-through;
+}
+.discount-price{
+    font-size: 12px;
+    font-weight: 400;
+    color: #ff905a;
+    margin-left: 5px;
+}
+.details h4{
+    margin: 0;
+    padding: 0;
+}
+.product-sizes{
+     font-size: 14px;
+     color:#535665;;
+     line-height: 1;
+     display: none;   
+     margin-top: 12px;  
+     white-space: nowrap;
+     font-weight: 400;
+}
+.product:hover .product-sizes{
+    display: block;
+}
+.product:hover .action-button{
+   display: block;
+}
+.product:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+
+/* @media only screen and (max-width:576px) {
+    .left-container {
+        display: none !important;
+    }
+    .right-container {
+        width: 100% !important;
+    }
+} */
